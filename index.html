@@ -1,57 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Title Tag -->
     <title>Document</title>
-    <!--  Home Css File -->
-    <link rel="stylesheet" href="./css/home.css" />
-    <!-- Google Fonts Library -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/home.css" />
   </head>
   <body>
-    <!-- Start main Section -->
-    <div class="landing" id="Home">
-      <header>
-        <img src="./assest/transparent.webp" alt="Website Logo" />
-        <div class="addresses">
+    <!-- Start Header Section -->
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <img src="./assest/logo.png" alt="logo" width="70" />
+        </div>
+        <nav class="navbar">
           <ul>
-            <li><a href="#Home">Home</a></li>
-            <li><a href="#Books">All Books</a></li>
+            <li><a href="">Home</a></li>
+            <li><a href="">All Books</a></li>
             <li><a href="#About">About</a></li>
             <li><a href="#Contact">Contact</a></li>
+            <li><a href="">Personal List</a></li>
           </ul>
-          <a href="./cart.html">
-            <button
-              class="personal-button hover-effect"
-              aria-label="Personal List"
-            >
-              PERSONAL LIST
-            </button>
-          </a>
-        </div>
-      </header>
-      <div class="content">
-        <div class="Hello-worlds">
-          <p class="p1">Welcome to the art world!</p>
-          <p class="p2">Here,you can shop art prints and original paintings</p>
-        </div>
-        <div class="two-button">
-          <input class="in-1" type="button" value="Get Start Now" />
-          <input class="in-2" type="button" value="View Products" />
+        </nav>
+      </div>
+    </header>
+    <!-- End Header Section -->
+    <!-- Start Landing Section -->
+    <div class="landing">
+      <div class="container">
+        <h1>Welcome to <br />The Book World!</h1>
+        <p>Here, you can read and feed your mind with reading.</p>
+        <div class="btns">
+          <a href="">Get Read Now</a>
+          <a href="">View Books</a>
         </div>
       </div>
     </div>
-    <!-- End main Section -->
-    <!-- Start Landing Section -->
-
     <!-- End Landing Section -->
+    <!-- Start About Section -->
+    <section id="About" class="about-section">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text">
+            <h2>About Us</h2>
+            <p class="about-description">
+              Welcome to <strong>ArtWorld</strong> – your destination for
+              discovering and collecting exquisite art pieces. Our mission is to
+              provide a seamless experience for art enthusiasts, offering a
+              curated collection of prints, paintings, and custom artworks that
+              inspire creativity and connect people with the world of fine art.
+            </p>
+            <p class="about-mission">
+              <strong>Our Mission:</strong> To make art accessible to everyone,
+              by connecting art lovers and collectors with stunning pieces that
+              reflect the passion and vision of talented artists from around the
+              globe.
+            </p>
+            <a href="#Contact" class="contact-button">Get in Touch</a>
+          </div>
+          <div class="about-image">
+            <img src="./assest/art-gallery.png" alt="Art Gallery" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End About Section -->
+    <!-- Start Contact Section -->
+    <section id="Contact" class="contact-section">
+      <div class="container">
+        <div class="contact-header">
+          <h2>Contact Us</h2>
+          <p>
+            We'd love to hear from you! Whether you have questions, inquiries,
+            or would like to collaborate, feel free to reach out.
+          </p>
+        </div>
+        <div class="contact-content">
+          <div class="contact-form">
+            <form action="">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Your Name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  rows="5"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+              <input type="submit" class="submit-btn" value="Send Message" />
+            </form>
+          </div>
+          <div class="contact-info">
+            <div class="info-box">
+              <i class="fa-solid fa-phone"></i>
+              <p><strong>Phone:</strong> +123 456 7890</p>
+            </div>
+            <div class="info-box">
+              <i class="fas fa-envelope"></i>
+              <p><strong>Email:</strong> Books@gmail.com</p>
+            </div>
+            <div class="info-box">
+              <i class="fas fa-map-marker-alt"></i>
+              <p><strong>Location:</strong> Al-Ersal Street, Ramallah</p>
+            </div>
+            <div class="social-icons">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Contact Section -->
   </body>
 </html>
