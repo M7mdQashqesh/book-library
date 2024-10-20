@@ -15,6 +15,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
     <link rel="stylesheet" href="./css/home.css" />
+    <script src="books.js"></script>
   </head>
   <body>
     <!-- Start Header Section -->
@@ -26,7 +27,7 @@
         <nav class="navbar">
           <ul>
             <li><a href="">Home</a></li>
-            <li><a href="">All Books</a></li>
+            <li><a href="#all-books">All Books</a></li>
             <li><a href="#About">About</a></li>
             <li><a href="#Contact">Contact</a></li>
             <li><a href="">Personal List</a></li>
@@ -47,7 +48,28 @@
       </div>
     </div>
     <!-- End Landing Section -->
-    <!-- Start About Section -->
+    <!-- Start Books Section -->
+    <section class="all-books" id="all-books">
+      <div class="container">
+        <div class="trending">
+          <div class="trend-header">
+            <h3>Trending</h3>
+            <p>See all &gt;</p>
+          </div>
+          <div class="books-row" id="trend-books"></div>
+        </div>
+        <!-- ************************* -->
+        <div class="trending">
+          <div class="trend-header">
+            <h3>Populer</h3>
+            <p>See all &gt;</p>
+          </div>
+          <div class="books-row" id="populer-books"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End Books Section -->
     <section id="About" class="about-section">
       <div class="container">
         <div class="about-content">
@@ -137,5 +159,6 @@
       </div>
     </section>
     <!-- End Contact Section -->
+    <script src="script.js"></script>
   </body>
 </html>
