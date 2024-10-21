@@ -35,7 +35,9 @@
             <ul>
               <li><a href="./index.html">Home</a></li>
               <li><a href="./allBooks.html">All Books</a></li>
-              <li><a href="#About">About</a></li>
+              <li>
+                <a href="./index.html#About">About</a>
+              </li>
               <li><a href="#Contact">Contact</a></li>
               <li><a href="./personalList.html">Personal List</a></li>
             </ul>
@@ -45,7 +47,20 @@
       <!-- End Header Section -->
 
       <main class="container">
-        <h1>Our Books</h1>
+        <div class="search-container">
+          <div class="top-of-page">
+            <h1>Our Books</h1>
+            <div class="add-btn">
+              <button>Add Book</button>
+            </div>
+          </div>
+          <div class="search">
+            <form action="" id="search-form">
+              <input type="text" placeholder="Search For A Book.." />
+              <button type="submit">Search</button>
+            </form>
+          </div>
+        </div>
         <div class="all-books-page" id="all-books-page"></div>
       </main>
     </div>
