@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <!-- Title Tag -->
+    <title>Book Library |</title>
+    <!-- Google Font Library -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome Library -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <!-- Home Css File -->
     <link rel="stylesheet" href="./css/home.css" />
-    <script src="books.js"></script>
   </head>
   <body>
     <!-- Start Header Section -->
@@ -26,11 +30,11 @@
         </div>
         <nav class="navbar">
           <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="#all-books">All Books</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./allBooks.html">All Books</a></li>
             <li><a href="#About">About</a></li>
             <li><a href="#Contact">Contact</a></li>
-            <li><a href="">Personal List</a></li>
+            <li><a href="./personalList.html">Personal List</a></li>
           </ul>
         </nav>
       </div>
@@ -42,32 +46,32 @@
         <h1>Welcome to <br />The Book World!</h1>
         <p>Here, you can read and feed your mind with reading.</p>
         <div class="btns">
-          <a href="">Get Read Now</a>
-          <a href="">View Books</a>
+          <a href="#all-books">Get Read Now</a>
+          <a href="./allBooks.html">View Books</a>
         </div>
       </div>
     </div>
     <!-- End Landing Section -->
     <!-- Start Books Section -->
-    <section class="all-books" id="all-books">
+    <main class="all-books" id="all-books">
       <div class="container">
         <div class="trending">
           <div class="trend-header">
             <h3>Trending</h3>
-            <p>See all &gt;</p>
+            <a href="./allBooks.html">See all &gt;</a>
           </div>
           <div class="books-row" id="trend-books"></div>
         </div>
         <!-- ************************* -->
         <div class="trending">
           <div class="trend-header">
-            <h3>Populer</h3>
-            <p>See all &gt;</p>
+            <h3>Popular</h3>
+            <a href="./allBooks.html">See all &gt;</a>
           </div>
           <div class="books-row" id="populer-books"></div>
         </div>
       </div>
-    </section>
+    </main>
 
     <!-- End Books Section -->
     <section id="About" class="about-section">
@@ -159,6 +163,7 @@
       </div>
     </section>
     <!-- End Contact Section -->
-    <script src="script.js"></script>
+    <script src="./books.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

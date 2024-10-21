@@ -1,8 +1,7 @@
-const trendbooks = document.getElementById("trend-books");
-const populerbooks = document.getElementById("populer-books");
+const allBooks = document.getElementById("all-books-page");
 
-const renderTrendBook = (book) => {
-  const bookHTML1 = `
+const renderAllBooks = (book) => {
+  const bookHTML3 = `
     <div class="book">
       <img src="${book.img}" alt="${book.bookName}" />
       <h5>${book.bookName}</h5>
@@ -14,42 +13,17 @@ const renderTrendBook = (book) => {
       }')">Add To My Library</button>
     </div>
   `;
-  trendbooks.insertAdjacentHTML("beforeend", bookHTML1);
+  allBooks.insertAdjacentHTML("beforeend", bookHTML3);
 };
 
-const renderPopulerBook = (book) => {
-  const bookHTML2 = `
-    <div class="book">
-      <img src="${book.img}" alt="${book.bookName}" />
-      <h5>${book.bookName}</h5>
-      <p>${book.author}</p>
-      <span class="status">${book.read ? "Read" : "Unread"}</span>
-      <span class="rating">${book.rate}</span>
-      <button onClick="addToLocal('${
-        book.bookName
-      }')">Add To My Library</button>
-    </div>
-  `;
-  populerbooks.insertAdjacentHTML("beforeend", bookHTML2);
-};
-
-const renderAllTrendBooks = () => {
-  trendbooks.innerHTML = "";
+const renderAllBooksSection = () => {
+  allBooks.innerHTML = "";
   books
-    .filter((book) => book.category === "Trending")
-    .forEach((book) => renderTrendBook(book));
+    .filter((book) => book.category === "All")
+    .forEach((book) => renderAllBooks(book));
 };
 
-const renderAllPopulerBooks = () => {
-  populerbooks.innerHTML = "";
-  books
-    .filter((book) => book.category === "Popular")
-    .forEach((book) => renderPopulerBook(book));
-};
-
-
-renderAllTrendBooks();
-renderAllPopulerBooks();
+renderAllBooksSection();
 
 const addToLocal = (bookN) => {
   // Get existing books from local storage or set an empty array if none exist
