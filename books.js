@@ -1,8 +1,8 @@
-const books = [
+let books = [
   {
     bookName: "Beyond-the-Sunset",
     author: "Anna Jacobs",
-    read: true,
+    read: false,
     rate: "5/5",
     img: "./assest/Beyond-the-Sunset.webp",
     category: ["Trending", "All"],

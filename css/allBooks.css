@@ -1,3 +1,7 @@
+header .container i {
+  color: black !important;
+}
+
 .books-page > .container {
   padding-top: 150px;
   padding-bottom: 100px;
@@ -32,7 +36,6 @@
 }
 
 .search-container {
-  /* display: flex; */
   justify-content: space-between;
   align-items: center;
 }
@@ -63,6 +66,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .search-container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 70px;
+  }
 }
 
 .search-container .search form {
@@ -70,11 +82,25 @@
   align-items: center;
 }
 
+@media (max-width: 767px) {
+  .search-container .search form {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 .search-container input[type="text"] {
   padding: 10px 20px;
   font-size: 18px;
   border-radius: 5px;
   border: 1px solid #ccc;
+}
+
+@media (max-width: 767px) {
+  .search-container input[type="text"] {
+    font-size: 14px;
+  }
 }
 
 form button[type="submit"] {
@@ -88,3 +114,80 @@ form button[type="submit"] {
   cursor: pointer;
   margin-left: 20px;
 }
+
+@media (max-width: 767px) {
+  form button[type="submit"] {
+    font-size: 14px;
+  }
+}
+
+/**    Add Modal    **/
+#addModal {
+  display: none;
+  position: absolute;
+  left: 5;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+#addModal.shown {
+  display: block;
+}
+
+.modal-content {
+  background-color: rgb(234 226 213);
+  border: 2px solid var(--orange-color);
+  border-radius: 10px;
+  padding: 20px;
+  width: 400px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+.form-group label {
+  font-weight: bold;
+  color: #333;
+}
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.submit-btn,
+.reset-btn {
+  background-color: var(--orange-color);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.reset-btn {
+  background-color: #ddd;
+  color: #333;
+}
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #555;
+}
+

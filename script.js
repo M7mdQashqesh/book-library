@@ -1,7 +1,17 @@
 const trendbooks = document.getElementById("trend-books");
 const populerbooks = document.getElementById("populer-books");
-
 const menuBars = document.getElementById("menu-bars");
+const headerLinks = document.querySelectorAll(".links");
+
+headerLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    const navbar = document.querySelector(".navbar");
+    const sidebar = document.querySelector(".sidebar");
+
+    navbar.classList.remove("show");
+    sidebar.classList.remove("show");
+  });
+});
 
 menuBars.addEventListener("click", function () {
   const navbar = document.querySelector(".navbar");

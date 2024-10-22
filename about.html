@@ -24,7 +24,7 @@
   </head>
   <body>
     <!-- Start Header Section -->
-    <header class="header">
+    <header class="header" id="top">
       <div class="container">
         <div class="logo">
           <img src="./assest/logo.png" alt="logo" />
@@ -36,11 +36,13 @@
             <li class="image">
               <img src="./assest/logo.png" alt="" />
             </li>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./allBooks.html">All Books</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="#Contact">Contact</a></li>
-            <li><a href="./personalList.html">Personal List</a></li>
+            <li><a class="links" href="./index.html">Home</a></li>
+            <li><a class="links" href="./allBooks.html">All Books</a></li>
+            <li><a class="links" href="./about.html">About</a></li>
+            <li><a class="links" href="./index.html#Contact">Contact</a></li>
+            <li>
+              <a class="links" href="./personalList.html">Personal List</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -117,7 +119,72 @@
       </div>
     </div>
     <!-- End About Section -->
-
+    <!-- Start Footer Section -->
+    <div class="footer">
+      <div class="container">
+        <div class="cols-container">
+          <div class="col-one">
+            <h3>Books</h3>
+            <div class="icons">
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-youtube"></i>
+            </div>
+            <p>
+              The Library Books project is designed to allow users to add their
+              new books and allows them to add their books to their own library
+              and whether the book has been read or not.
+            </p>
+          </div>
+          <div class="col-two">
+            <ul>
+              <li>
+                <a href="#top"><i class="fa-solid fa-angles-right"></i> Home</a>
+              </li>
+              <li>
+                <a href="./allBooks.html"
+                  ><i class="fa-solid fa-angles-right"></i> All Books</a
+                >
+              </li>
+              <li>
+                <a href="/about.html"
+                  ><i class="fa-solid fa-angles-right"></i> About</a
+                >
+              </li>
+              <li>
+                <a href="./index.html#Contact"
+                  ><i class="fa-solid fa-angles-right"></i> Contact</a
+                >
+              </li>
+              <li>
+                <a href="./personalList.html"
+                  ><i class="fa-solid fa-angles-right"></i> Personal List</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-three">
+            <div class="info">
+              <i class="fas fa-map-marker-alt fa-fw"></i>
+              <p class="text">Al-Ersal Street, Ramallah</p>
+            </div>
+            <div class="info">
+              <i class="far fa-clock fa-fw"></i>
+              <p>Business Hours: From 10:00 To 18:00</p>
+            </div>
+            <div class="info">
+              <i class="fas fa-phone-volume fa-fw"></i>
+              <div class="text">
+                <p>+123 456 7890</p>
+                <p>+123 456 7890</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="foot">Made With Love By The Golden Mind</div>
+    </div>
+    <!-- End Footer Section -->
     <script src="./script.js"></script>
   </body>
 </html>
