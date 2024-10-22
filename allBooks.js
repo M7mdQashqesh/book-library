@@ -34,9 +34,7 @@ const renderAllBooks = (book) => {
 
 const renderAllBooksSection = () => {
   allBooks.innerHTML = "";
-  books
-    .filter((book) => book.category === "All")
-    .forEach((book) => renderAllBooks(book));
+  books.forEach((book) => renderAllBooks(book));
 };
 
 renderAllBooksSection();

@@ -1,6 +1,26 @@
 const trendbooks = document.getElementById("trend-books");
 const populerbooks = document.getElementById("populer-books");
 
+const menuBars = document.getElementById("menu-bars");
+
+menuBars.addEventListener("click", function () {
+  const navbar = document.querySelector(".navbar");
+  const sidebar = document.querySelector(".sidebar");
+
+  navbar.classList.add("show");
+  sidebar.classList.add("show");
+});
+
+const closeSidebar = document.getElementById("close-sidebar");
+
+closeSidebar.addEventListener("click", function () {
+  const navbar = document.querySelector(".navbar");
+  const sidebar = document.querySelector(".sidebar");
+
+  navbar.classList.remove("show");
+  sidebar.classList.remove("show");
+});
+
 const renderTrendBook = (book) => {
   // Get books from local storage
   const storedBooks = JSON.parse(localStorage.getItem("books")) || [];
