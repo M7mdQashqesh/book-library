@@ -18,12 +18,29 @@ closeSidebar.addEventListener("click", function () {
   navbar.classList.remove("show");
   sidebar.classList.remove("show");
 });
+const toggleReadStatus = (bookName) => {
+  const book = books.find((b) => b.bookName === bookName);
+
+  if (book) {
+    book.read = !book.read;
+
+    const storedBooks = JSON.parse(localStorage.getItem("books")) || [];
+    const updatedBooks = storedBooks.map((storedBook) => {
+      if (storedBook.bookName === bookName) {
+        return { ...storedBook, read: book.read };
+      }
+      return storedBook;
+    });
+    localStorage.setItem("books", JSON.stringify(updatedBooks));
+
+    renderPersonalBooks();
+  }
+};
 
 const renderPersonalBooks = () => {
   personalBooks.innerHTML = "";
   const storedBooks = JSON.parse(localStorage.getItem("books")) || [];
 
-  // function if there are no books
   if (storedBooks.length === 0) {
     personalBooks.innerHTML = `<p class="no-books-message">There are no books in your library.</p>`;
     return;
@@ -38,7 +55,11 @@ const renderPersonalBooks = () => {
             <div class="info">
               <h5>${book.bookName}</h5>
               <p>${book.author}</p>
-              <span class="status">${book.read ? "Read" : "Unread"}</span>
+              <span class="status" onClick="toggleReadStatus('${
+                book.bookName
+              }')" style="color: ${book.read ? "green" : "red"};">
+  ${book.read ? "Read" : "Unread"}
+</span>
               <span class="rating">${book.rate}</span>
               <button onClick="removeFromLocal('${
                 book.bookName
