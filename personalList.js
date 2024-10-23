@@ -23,6 +23,12 @@ const renderPersonalBooks = () => {
   personalBooks.innerHTML = "";
   const storedBooks = JSON.parse(localStorage.getItem("books")) || [];
 
+  // function if there are no books
+  if (storedBooks.length === 0) {
+    personalBooks.innerHTML = `<p class="no-books-message">There are no books in your library.</p>`;
+    return;
+  }
+
   storedBooks.forEach((book) => {
     const bookHTML3 = `
           <div class="book">
