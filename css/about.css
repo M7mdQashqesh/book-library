@@ -42,8 +42,9 @@ header .container > i {
   max-width: 100%;
   max-height: 500px;
   object-fit: cover;
-  object-position: top;
+  object-position: bottom;
   border-radius: 80px 0 80px 0;
+  border: 5px solid orangered;
 }
 
 .about-us > .container .overview {
