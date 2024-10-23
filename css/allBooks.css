@@ -130,6 +130,7 @@ form button[type="submit"] {
   justify-content: center;
   align-items: center;
 }
+
 #addModal.shown {
   display: block;
 }
@@ -139,11 +140,17 @@ form button[type="submit"] {
   border: 2px solid var(--orange-color);
   border-radius: 10px;
   padding: 20px;
-  width: 400px;
+  max-width: 400px;
   position: relative;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   animation: fadeIn 0.3s ease;
+}
+
+@media (max-width: 767px) {
+  .modal-content {
+    max-width: 350px;
+  }
 }
 
 .form-group {
@@ -190,4 +197,3 @@ form button[type="submit"] {
   cursor: pointer;
   color: #555;
 }
-
