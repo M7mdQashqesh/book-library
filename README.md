@@ -152,12 +152,8 @@ This project is created for educational purposes as part of the Gaza Sky Geeks b
 
 As this is a team project, contributions from team members are welcome. Please coordinate with the team before making significant changes.
 
-## 📞 Contact & Support
-
-For questions or issues related to this project, please reach out to the development team through Gaza Sky Geeks.
-
 ---
 
-**Created with ❤️ by the Gaza Sky Geeks Development Team**
+**Created with ❤️ by the The Golden Mind Development Team**
 
 *Bringing the joy of reading to the digital age*
